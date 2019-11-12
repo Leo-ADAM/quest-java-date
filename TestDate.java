@@ -18,15 +18,17 @@ class TestDate {
         sc.close();
 
         // TODO : your code after this line
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-yyyy");
         Calendar c = new GregorianCalendar(year, month-1, day);
         Date d = c.getTime();
         System.out.println("The date is : " + sdf.format(d));
+        int dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
+        System.out.println("The day of week is :" + dayOfWeek);
         
-        SimpleDateFormat sdf1 = new SimpleDateFormat("dd");
+        /*SimpleDateFormat sdf1 = new SimpleDateFormat("dd");
         Calendar c1 = new GregorianCalendar(year, month-1, day);
         Date d1 = c1.getTime();
-        System.out.println("The day of week is : " + sdf1.format(d1));
+        System.out.println("The day of week is : " + sdf1.format(d1));*/
         
         
     }
